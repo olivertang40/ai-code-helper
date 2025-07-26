@@ -1,9 +1,12 @@
 package com.yupi.aicodehelper.ai;
 
 import com.yupi.aicodehelper.ai.guardrail.SafeInputGuardrail;
+import dev.langchain4j.service.MemoryId;
 import dev.langchain4j.service.Result;
 import dev.langchain4j.service.SystemMessage;
+import dev.langchain4j.service.UserMessage;
 import dev.langchain4j.service.guardrail.InputGuardrails;
+import reactor.core.publisher.Flux;
 
 import java.util.List;
 
@@ -24,4 +27,8 @@ public interface AiCodeHelperService {
     // 返回RAG 封装后的结果
     @SystemMessage(fromResource = "system-prompt.txt")
     Result<String> chatWithRag(String userMessage);
+
+    // 流式输出
+    @SystemMessage(fromResource = "system-prompt.txt")
+    Flux<String> chatStream(@MemoryId int memoryId, @UserMessage String userMessage);
 }

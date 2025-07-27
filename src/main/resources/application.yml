@@ -1,16 +1,21 @@
 spring:
   application:
     name: ai-code-helper
-
   profiles:
     active: local
-
+server:
+  port: 8081
+  servlet:
+    context-path: /api
 langchain4j:
   community:
     dashscope:
       chat-model:
         api-key: <Your API KEY>
         model-name: qwen-turbo
+      streaming-chat-model:
+        model-name: qwen-turbo
+        api-key: <Your API KEY>
       embedding-model:
         model-name: text-embedding-v4
         api-key: <Your API KEY>

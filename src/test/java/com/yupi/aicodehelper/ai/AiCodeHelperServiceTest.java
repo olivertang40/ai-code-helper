@@ -14,13 +14,13 @@ class AiCodeHelperServiceTest {
 
     @Test
     void chat() {
-        String result = aiCodeHelperService.chat("你好,我是程序员yupi");
+        String result = aiCodeHelperService.chat("你好,我是程序员oliver");
         System.out.println(result);
     }
 
     @Test
     void chatWithMemory() {
-        String result = aiCodeHelperService.chat("你好,我是程序员yupi");
+        String result = aiCodeHelperService.chat("你好,我是程序员oliver");
         System.out.println(result);
         result = aiCodeHelperService.chat("你好，我是谁？");
         System.out.println(result);
@@ -28,7 +28,7 @@ class AiCodeHelperServiceTest {
 
     @Test
     void chatForReport() {
-        String userMessage = "你好, 我是程序员yupi,学编程两年半, 请帮我制定学习报告";
+        String userMessage = "你好, 我是程序员oliver,学编程两年半, 请帮我制定学习报告";
         Report report = aiCodeHelperService.chatForReport(userMessage);
         System.out.println(report);
     }

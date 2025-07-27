@@ -13,11 +13,11 @@ langchain4j:
       chat-model:
         api-key: <Your API KEY>
         model-name: qwen-turbo
-      embedding-model:
-        model-name: text-embedding-v4
-        api-key: <Your API KEY>
       streaming-chat-model:
         model-name: qwen-turbo
+        api-key: <Your API KEY>
+      embedding-model:
+        model-name: text-embedding-v4
         api-key: <Your API KEY>
 bigmodel:
   api-key: <Your API KEY>
